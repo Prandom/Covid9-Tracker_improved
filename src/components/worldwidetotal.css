@@ -1,0 +1,18 @@
+.data-cont{
+    @apply lg:p-6 sm:p-3 mx-10 my-6 px-10 py-2 rounded-lg shadow-xl md:text-xl text-lg uppercase font-semibold flex flex-col items-center;
+}
+.data{
+    @apply font-black lg:text-4xl md:text-2xl sm:text-xl mt-6 tracking-wide;
+}
+.world{
+    @apply font-extrabold lg:text-5xl md:text-3xl sm:text-2xl mt-1 ;
+}
+.heading{
+    @apply lg:text-7xl md:text-5xl text-4xl mt-8 mb-6 font-bold flex items-center justify-center uppercase ;
+}
+.comp1{
+    @apply lg:text-5xl text-2xl font-bold flex justify-center tracking-wider;
+}
+/* .container-wrap{
+    transition: opacity 200ms ease-in-out;
+} */

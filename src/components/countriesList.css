@@ -1,0 +1,29 @@
+.data-cont{
+    @apply lg:p-4 sm:p-2 mx-2 my-6 py-2 px-1 rounded-lg shadow-xl md:text-xl text-lg uppercase font-semibold flex flex-col items-center;
+    /* transition: transform 100ms ease-in-out; */
+    /* transform: scale(0.75); */
+}
+/* .data-cont:hover{
+    transform: scale(1.25);
+    cursor: pointer;
+    @apply shadow-2xl;
+} */
+.data{
+    @apply font-black lg:text-4xl md:text-2xl text-lg mt-2 sm:mt-5 md:mt-6 tracking-wide;
+}
+.country{
+    @apply font-extrabold lg:text-4xl sm:text-xl text-lg mt-1 ;
+}
+.heading{
+    @apply lg:text-7xl md:text-5xl text-4xl mt-8 mb-6 font-bold flex items-center justify-center uppercase ;
+}
+.custom{
+    @apply mt-8 flex items-center md:p-4 p-1 text-sm sm:text-base md:text-lg border-2 border-black;
+    transform: scaleX(0.95)
+}
+.wrap{
+    @apply flex flex-col items-center justify-center;
+}
+.comp3{
+    @apply lg:text-5xl text-3xl mt-5 font-bold flex justify-center ;
+}
