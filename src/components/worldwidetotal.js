@@ -39,7 +39,7 @@ const Worldwidetotal = () => {
                 <div className="heading right flex justify-center">
                     <h1>COVID-19 Tracker</h1>
                 </div>
-                <div className="comp1 right uppercase">
+                <div className="comp right uppercase">
                     <h3>World Wide Stats</h3>
                 </div>
                 <div className="flex flex-col sm:flex-row mt-6 mont py-4 px-8 justify-between object-contain">

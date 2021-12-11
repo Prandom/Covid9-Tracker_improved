@@ -48,11 +48,11 @@ const StateData = () => {
                 transition={{
                     duration:0.9
                 }}>
-                <div className="comp2 right uppercase mb-10">
+                <div className="comp right uppercase mb-10">
                     <h3>Indian States Data</h3>
                 </div>
                 <table className="table-auto bg-red-100 table1">
-                    <thead className="head">
+                    <thead className="head1">
                         <tr className="row row1">
                             <th className="cell">State</th>
                             <th className="cell ">Cases</th>

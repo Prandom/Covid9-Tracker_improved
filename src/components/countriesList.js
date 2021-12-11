@@ -41,7 +41,7 @@ const CountriesList = () => {
                 transition={{
                     duration:1
                 }}>
-                <div className="comp3 right uppercase flex justify-center">
+                <div className="comp right uppercase flex justify-center">
                     <h3>Country Wise Stats</h3>
                 </div>
                 { <select className="custom mont" onChange={
