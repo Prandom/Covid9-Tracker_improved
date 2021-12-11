@@ -1,14 +1,18 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState,useEffect,useRef} from 'react'
 import {Line} from 'react-chartjs-2'
+import {CategoryScale} from 'chart.js';
 // import Plot  from 'react-plotly.js';
 
 const Chart = () => {
-    const [data1,setData] = useState({});
-    var labelArr = [30];
-    var dataArr = [30];
+    const [data1,setData] = useState([]);
+    // const [labelArr, setLabelArr] = useState([30]);
+    // const [dataArr, setDataArr] = useState([30]);
+    const labelArr = useRef([]);
+    const dataArr = useRef(['']);
     // let cases_no =[];
     // let deaths_no=[];
     // let recovered_no=[];
+    // let labels = [];
     // const getCovidData = async()=>{
     //     try{
     //         const response = await fetch('https://disease.sh/v3/covid-19/historical/all');
@@ -61,23 +65,30 @@ const Chart = () => {
     //         console.log(err);
     //     }
     // }
-    useEffect(()=>{
-        const getCovidData = async()=>{
+    const getCovidData = async()=>{
         try{
             const response = await fetch('https://disease.sh/v3/covid-19/historical/all');
             const apiData = await response.json();
-            labelArr = Object.keys(apiData.cases);
-            dataArr = Object.values(apiData.cases);
-            console.log(labelArr);
-            console.log(dataArr);
+            // setData(apiData);
+            labelArr.current = Object.keys(apiData.cases);
+            dataArr.current = Object.values(apiData.cases);
+            // console.log(labelArr.current);
+            // console.log(dataArr.current);
 
+            // for(var i=0;i<30;i++)
+            // {
+            //     cases_no.push(parseInt(apiData.cases[i]));
+            //     deaths_no.push(parseInt(apiData.deaths[i]));
+            //     recovered_no.push(parseInt(apiData.recovered[i]));
+            //     labels.push(`${30-i} Days Back`);
+            // }
             setData({
                 labels: labelArr,
                 datasets: [
                     {
                         label: "Cases LAST 30 Days",
                         data: dataArr,
-                        backgroundColor: "FFFCDC"
+                        backgroundColor: "#FFFCDC"
                     }
                 ]
             });
@@ -86,6 +97,8 @@ const Chart = () => {
             console.log(err);
         }
     }
+    useEffect(()=>{
+        getCovidData();
     },[]);
     
     return (
