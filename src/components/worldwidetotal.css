@@ -13,6 +13,7 @@
 .comp1{
     @apply lg:text-5xl text-2xl font-bold flex justify-center tracking-wider;
 }
-/* .container-wrap{
-    transition: opacity 200ms ease-in-out;
-} */
+.container-wrap{
+    background-color: #f5cc92;
+    box-shadow: 2px 4px 15px 3px #6b6762;
+}

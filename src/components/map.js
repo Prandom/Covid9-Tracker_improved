@@ -9,55 +9,55 @@ const CovidMap = () => {
     const [countries,setCountries] = useState([]);
     // const [i,setI] = useState(0);
     var i = 0;
-    const [data,setData] = useState([]);
-    const [countryName,setCountryName] = useState([]);
-    const [cases,setCases] = useState([]);
-    const [deaths,setdeaths] = useState([]);
-    const [recovered,setRecovered] = useState([]);
-    const covidData =[];
+    // const [data,setData] = useState([]);
+    // const [countryName,setCountryName] = useState([]);
+    // const [cases,setCases] = useState([]);
+    // const [deaths,setdeaths] = useState([]);
+    // const [recovered,setRecovered] = useState([]);
+    // const covidData =[];
     const load =()=>{
         setCountries(features);
     }
-    const getCovidData = async()=>{
-        try{
-            const response = await fetch(`https://disease.sh/v3/covid-19/countries`);
-            const apiData = await response.json();
-            setData(apiData);
-            Object.values(apiData).forEach(val =>{
-                // console.log(val.countryInfo.iso3);
-                covidData[i] = {
-                    iso3: val.countryInfo.iso3,
-                    cases: val.cases,
-                    deaths: val.deaths,
-                    recovered: val.recovered,
-                }
-                i++;
-            });
-            covidData.forEach((obj)=>console.log(obj));
-            // setCases(data.cases);
-            // setdeaths(data.deaths);
-            // setRecovered(data.recovered);
-            // console.log(cases);
-            // console.log(deaths);
-            // console.log(recovered);
+    // const getCovidData = async()=>{
+    //     try{
+    //         const response = await fetch(`https://disease.sh/v3/covid-19/countries`);
+    //         const apiData = await response.json();
+    //         setData(apiData);
+    //         // Object.values(apiData).forEach(val =>{
+    //         //     // console.log(val.countryInfo.iso3);
+    //         //     covidData[i] = {
+    //         //         iso3: val.countryInfo.iso3,
+    //         //         cases: val.cases,
+    //         //         deaths: val.deaths,
+    //         //         recovered: val.recovered,
+    //         //     }
+    //         //     i++;
+    //         // });
+    //         // covidData.forEach((obj)=>console.log(obj));
+    //         // setCases(data.cases);
+    //         // setdeaths(data.deaths);
+    //         // setRecovered(data.recovered);
+    //         // console.log(cases);
+    //         // console.log(deaths);
+    //         // console.log(recovered);
 
-        } catch(err){
-            console.log(err);
-        }
-    }
+    //     } catch(err){
+    //         console.log(err);
+    //     }
+    // }
     const mapStyle ={
         fillColor: 'white',
         weight:1,
         color: 'black',
         fillOpacity:1,
     };
-    const findCountry=(pr)=>{
-        const ind = covidData.find(obj => obj.iso3 === pr.ISO_A3);
-        console.log(ind);
-        // setCases(covidData[ind].cases);
-        // setdeaths(covidData[ind].deaths);
-        // setRecovered(covidData[ind].recovered);
-    }
+    // const findCountry=(pr)=>{
+    //     const ind = covidData.find(obj => obj.iso3 === pr.ISO_A3);
+    //     console.log(ind);
+    //     // setCases(covidData[ind].cases);
+    //     // setdeaths(covidData[ind].deaths);
+    //     // setRecovered(covidData[ind].recovered);
+    // }
     // const onEachCountry = (country,layer)=>{
     //     // layer.on('click',setCountryName(country.properties.ADMIN));
     //     layer.bindPopup(country.properties.ADMIN);
@@ -65,7 +65,7 @@ const CovidMap = () => {
     // }
     
     useEffect(load, []);
-    useEffect(getCovidData, []);
+    // useEffect(getCovidData, []);
     
     return (
         <div>

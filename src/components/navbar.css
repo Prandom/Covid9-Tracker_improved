@@ -2,18 +2,19 @@
 @tailwind components;
 @tailwind utilities; */
 
-body {
-  background-color: rgb(248, 210, 210);
+.cont{
+  background-color: #064663;
 }
 .nav{
-  box-shadow: 2px 2px 5px rgba(128, 135, 148, 0.562)
+  box-shadow: 2px 3px 15px 3px rgba(70, 77, 87, 0.562)
 }
 .link{
   @apply relative;
 }
 .link::after{
   content: "";
-  @apply absolute bottom-0 left-0 w-full bg-red-400 lg:mt-2 h-0.5 mt-6;
+  @apply absolute bottom-0 left-0 w-full lg:mt-2 h-0.5 mt-6;
+  background-color: #6491a7;
   /* height: 2.5px; */
   transform: scaleX(0.5);
   transition: transform 100ms ease-in-out;
@@ -23,4 +24,7 @@ body {
 }
 .cont{
   z-index: 500;
+}
+.nav-items{
+  color: #c3d4dd;
 }

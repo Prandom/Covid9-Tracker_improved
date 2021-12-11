@@ -29,9 +29,9 @@ const CountriesList = () => {
     },[]);
     return (
        <>
-            <motion.div className="wrap container w-5/6 flex flex-col items-center justify-center mx-auto bg-yellow-100 mb-10 "
+            <motion.div className="wrap container container-wrap w-5/6 flex flex-col items-center justify-center mx-auto bg-yellow-100 mb-10 border rounded-lg"
             animate={{
-                    x:15,
+                    x:5,
                     opacity:1
                 }}
                 initial={{
@@ -61,7 +61,7 @@ const CountriesList = () => {
                     }
                 </select> }
             
-                <div className="container-wrap flex flex-col shadow-md w-full items-center justify-center container mx-auto">  
+                <div className="container-wrap1 mt-2 flex flex-col shadow-md w-full items-center justify-center container mx-auto">  
                     <div className="flex flex-col sm:flex-row mt-6 mont object-scale-down">
                         <div className="data-cont bg-yellow-200 ">
                             Total Cases<div className="country">{country}</div>

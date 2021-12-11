@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import "../components/worldwidetotal.css"
 import { motion } from "framer-motion"
-import Chart from './chart'
+// import Chart from './chart'
 const Worldwidetotal = () => {
     const [data,setData] = useState([]);
     // const [cases,setCases] = useState(0);
@@ -24,7 +24,7 @@ const Worldwidetotal = () => {
     },[]);
     return (
        <>
-            <motion.div className="container-wrap flex flex-col shadow-md items-center justify-center mx-auto w-5/6 container bg-yellow-100 border-2 relative top-3"
+            <motion.div className="container-wrap flex flex-col shadow-md items-center justify-center mx-auto w-5/6 container border-0 relative top-3 rounded-lg"
                 animate={{
                     y:10,
                     opacity:1

@@ -1,6 +1,8 @@
 import React,{useState,useEffect} from 'react'
 import "../components/stateData.css"
 import { motion } from 'framer-motion';
+import Posts from './Posts';
+import Pagination from './Pagination';
 // const requestOptions ={
 //     method: 'GET',
 //     dataType: 'jsonp',
@@ -9,6 +11,9 @@ import { motion } from 'framer-motion';
 // }
 const StateData = () => {
     const [data,setData] = useState([]);
+    const [currentPage,setCurrentPage] = useState(1);
+    const [postsPerPage] = useState(5);
+
     const getCovidData = async()=>{
         try{
             const response = await fetch('https://api.covid19india.org/data.json');
@@ -21,9 +26,17 @@ const StateData = () => {
     useEffect(()=>{
         getCovidData();
     },[]);
+
+    const indexOfLastPost = currentPage * postsPerPage;
+    const indexOfFirstPost = indexOfLastPost - postsPerPage;
+    const currentPosts = data.slice(indexOfFirstPost,indexOfLastPost);
+    
+    const paginate = (pageNumber) =>{
+        setCurrentPage(pageNumber);
+    }
     return (
         <>
-            <motion.div className="container mx-auto flex flex-col items-center justify-center mont mt-16 shadow-xl mb-10  bg-yellow-100 rounded-xl pb-6 w-5/6 px-6"
+            <motion.div className="container container-wrap mx-auto flex flex-col items-center justify-center mont mt-16 shadow-xl mb-10  bg-yellow-100 rounded-xl pb-6 w-5/6 px-6"
             animate={{
                     x:5,
                     opacity:1
@@ -47,7 +60,7 @@ const StateData = () => {
                             <th className="cell ">Recovered</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    {/* <tbody>
                         {
                             data.map((element,index)=>{
                                 return(
@@ -60,8 +73,10 @@ const StateData = () => {
                                 )
                             })
                         }
-                    </tbody>
+                    </tbody> */}
+                    <Posts data={currentPosts}/>
                 </table>
+                <Pagination postsPerPage={postsPerPage} totalPosts={data.length} paginate={paginate}/>
                 {/* <div class="table w-4/5 ">
                     <div class="table-row-group">
                         <div class="table-row row1 row">

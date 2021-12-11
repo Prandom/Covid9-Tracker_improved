@@ -3,8 +3,8 @@ import './navbar.css'
 import {Link} from 'react-router-dom'
 function Navbar(){
     return(
-        <div className="cont sticky top-0 color2 sm:block bg-red-200">
-            <div className="nav box-border shadow-xl flex justify-between sm:justify-around p-8">
+        <div className="cont sticky top-0 color2 sm:block">
+            <div className="nav box-border flex justify-between sm:justify-around p-8">
                 <ul className="nav-list sm:flex items-center font-bold mont lg:text-2xl uppercase md:text-xl sm:text-lg">
                     <li className="nav-items lg:px-16 md:px-8 sm:px-4 cursor-pointer after:bg-red-400 after:bottom-0 "><Link to="/" className="link">Home</Link></li>
                     <li className="nav-items lg:px-16 md:px-8 sm:px-4 cursor-pointer after:bg-red-400 after:bottom-0 "><Link to="/news" className="link">News</Link></li>

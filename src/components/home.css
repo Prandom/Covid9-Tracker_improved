@@ -1,0 +1,5 @@
+.Home{
+    background-color: #00151f;
+    height: 100% ;
+    @apply flex flex-col items-center justify-center;
+}
