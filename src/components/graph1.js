@@ -1,13 +1,10 @@
-import React,{useState,useEffect,useRef} from 'react'
-// import {Line} from 'react-chartjs-2'
+import React,{useState,useEffect} from 'react'
 import Chart from "react-apexcharts";
 
 
 const Graph1 = () => {
     const [labels,setLabels] = useState([]);
     const [cases,setCases] = useState([]);
-    const [deaths,setDeaths] = useState([]);
-    const [rec,setRec] = useState([]);
     const [options,setOptions] = useState({});
     const [series,setSeries] = useState([{}]);
 
@@ -19,8 +16,6 @@ const Graph1 = () => {
             console.log(apiData)
             setLabels(Object.keys(apiData.cases))
             setCases(Object.values(apiData.cases))
-            setDeaths(Object.values(apiData.deaths))
-            setRec(Object.values(apiData.recovered))
 
             setOptions({
                 chart: {
@@ -49,7 +44,7 @@ const Graph1 = () => {
            
             
     useEffect(()=>{
-        getCovidData();
+        getCovidData(); // eslint-disable-line react-hooks/exhaustive-deps
     },[]);
     
     return (

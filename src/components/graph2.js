@@ -1,4 +1,4 @@
-import React,{useState,useEffect,useRef} from 'react'
+import React,{useState,useEffect} from 'react'
 // import {Line} from 'react-chartjs-2'
 import Chart from "react-apexcharts";
 
@@ -9,7 +9,6 @@ const Graph2 = () => {
     const [options,setOptions] = useState({});
     const [series,setSeries] = useState([{}]);
 
-    // const [data,setData] = useState([]);
     const getCovidData = async()=>{
         try{
             const response = await fetch('https://disease.sh/v3/covid-19/historical/all');
@@ -45,7 +44,7 @@ const Graph2 = () => {
            
             
     useEffect(()=>{
-        getCovidData();
+        getCovidData(); // eslint-disable-line react-hooks/exhaustive-deps
     },[]);
     
     return (

@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react'
-import { MapContainer, GeoJSON, Popup} from 'react-leaflet'
+import { MapContainer, GeoJSON} from 'react-leaflet'
 import "leaflet/dist/leaflet.css"
 import {features} from "../components/countries.json"
 import "../components/map.css"
@@ -8,7 +8,6 @@ import "../components/map.css"
 const CovidMap = () => {
     const [countries,setCountries] = useState([]);
     // const [i,setI] = useState(0);
-    var i = 0;
     // const [data,setData] = useState([]);
     // const [countryName,setCountryName] = useState([]);
     // const [cases,setCases] = useState([]);

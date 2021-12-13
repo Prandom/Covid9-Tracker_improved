@@ -20,7 +20,7 @@ const News = () => {
                 }}>
                     <h3>Headline: Lorem, ipsum dolor.</h3>
                     <p className='content'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime non alias, vitae assumenda incidunt distinctio ullam, itaque praesentium repudiandae sint nisi. Facere, nobis repellat. Voluptatum aliquam labore quasi exercitationem numquam molestiae. Quo reiciendis dicta tenetur quasi facere sequi minima, est omnis nostrum nisi architecto magni animi et sapiente, laudantium soluta eligendi dolor neque. Ex, sint corporis quo libero architecto ducimus. Labore natus earum deserunt ea odit! Accusantium odio exercitationem dignissimos officia consectetur laborum dolore ab nisi iure fuga magnam numquam dolorem veniam harum, nesciunt labore reiciendis molestiae dicta ea! Molestias corrupti possimus velit culpa recusandae expedita magnam perspiciatis dicta sint.</p>
-                    <p className='link-cont'><a href="#" className='links text-red-600'>Read More</a></p>
+                    <p className='link-cont'><a href="/#" className='links text-red-600'>Read More</a></p>
                 </motion.li>
                 <motion.li className="newsArticle"
                 animate={{
@@ -36,7 +36,7 @@ const News = () => {
                 }}>
                     <h3>Headline: Lorem, ipsum dolor.</h3>
                     <p  className='content'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime non alias, vitae assumenda incidunt distinctio ullam, itaque praesentium repudiandae sint nisi. Facere, nobis repellat. Voluptatum aliquam labore quasi exercitationem numquam molestiae. Quo reiciendis dicta tenetur quasi facere sequi minima, est omnis nostrum nisi architecto magni animi et sapiente, laudantium soluta eligendi dolor neque. Ex, sint corporis quo libero architecto ducimus. Labore natus earum deserunt ea odit! Accusantium odio exercitationem dignissimos officia consectetur laborum dolore ab nisi iure fuga magnam numquam dolorem veniam harum, nesciunt labore reiciendis molestiae dicta ea! Molestias corrupti possimus velit culpa recusandae expedita magnam perspiciatis dicta sint.</p>
-                    <p className='link-cont'><a href="#" className='links text-red-600'>Read More</a></p>
+                    <p className='link-cont'><a href="/#" className='links text-red-600'>Read More</a></p>
                 </motion.li>
                 <motion.li className="newsArticle"
                 animate={{
@@ -52,7 +52,7 @@ const News = () => {
                 }}>
                     <h3>Headline: Lorem, ipsum dolor.</h3>
                     <p  className='content'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime non alias, vitae assumenda incidunt distinctio ullam, itaque praesentium repudiandae sint nisi. Facere, nobis repellat. Voluptatum aliquam labore quasi exercitationem numquam molestiae. Quo reiciendis dicta tenetur quasi facere sequi minima, est omnis nostrum nisi architecto magni animi et sapiente, laudantium soluta eligendi dolor neque. Ex, sint corporis quo libero architecto ducimus. Labore natus earum deserunt ea odit! Accusantium odio exercitationem dignissimos officia consectetur laborum dolore ab nisi iure fuga magnam numquam dolorem veniam harum, nesciunt labore reiciendis molestiae dicta ea! Molestias corrupti possimus velit culpa recusandae expedita magnam perspiciatis dicta sint.</p>
-                    <p className='link-cont'><a href="#" className='links text-red-600'>Read More</a></p>
+                    <p className='link-cont'><a href="/#" className='links text-red-600'>Read More</a></p>
                 </motion.li>
                 <motion.li className="newsArticle"
                 animate={{
@@ -68,7 +68,7 @@ const News = () => {
                 }}>
                     <h3>Headline: Lorem, ipsum dolor.</h3>
                     <p  className='content'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime non alias, vitae assumenda incidunt distinctio ullam, itaque praesentium repudiandae sint nisi. Facere, nobis repellat. Voluptatum aliquam labore quasi exercitationem numquam molestiae. Quo reiciendis dicta tenetur quasi facere sequi minima, est omnis nostrum nisi architecto magni animi et sapiente, laudantium soluta eligendi dolor neque. Ex, sint corporis quo libero architecto ducimus. Labore natus earum deserunt ea odit! Accusantium odio exercitationem dignissimos officia consectetur laborum dolore ab nisi iure fuga magnam numquam dolorem veniam harum, nesciunt labore reiciendis molestiae dicta ea! Molestias corrupti possimus velit culpa recusandae expedita magnam perspiciatis dicta sint.</p>
-                    <p className='link-cont'><a href="#" className='links text-red-600'>Read More</a></p>
+                    <p className='link-cont'><a href="/#" className='links text-red-600'>Read More</a></p>
                 </motion.li>
                 <motion.li className="newsArticle"
                 animate={{
@@ -84,7 +84,7 @@ const News = () => {
                 }}>
                     <h3>Headline: Lorem, ipsum dolor.</h3>
                     <p  className='content'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime non alias, vitae assumenda incidunt distinctio ullam, itaque praesentium repudiandae sint nisi. Facere, nobis repellat. Voluptatum aliquam labore quasi exercitationem numquam molestiae. Quo reiciendis dicta tenetur quasi facere sequi minima, est omnis nostrum nisi architecto magni animi et sapiente, laudantium soluta eligendi dolor neque. Ex, sint corporis quo libero architecto ducimus. Labore natus earum deserunt ea odit! Accusantium odio exercitationem dignissimos officia consectetur laborum dolore ab nisi iure fuga magnam numquam dolorem veniam harum, nesciunt labore reiciendis molestiae dicta ea! Molestias corrupti possimus velit culpa recusandae expedita magnam perspiciatis dicta sint.</p>
-                    <p className='link-cont'><a href="#" className='links text-red-600'>Read More</a></p>
+                    <p className='link-cont'><a href="/#" className='links text-red-600'>Read More</a></p>
                 </motion.li>
             </ul>
             
