@@ -36,7 +36,7 @@ const Graph3 = () => {
             setSeries([{
                 name: "series1",
                 data: rec,
-            }]);
+            }]);// eslint-disable-line react-hooks/exhaustive-deps
         }
         catch(err){
             console.log(err);
@@ -45,8 +45,8 @@ const Graph3 = () => {
            
             
     useEffect(()=>{
-        // eslint-disable-next-line
         getCovidData();
+        // eslint-disable-line react-hooks/exhaustive-deps
     },[]);
     
     return (

@@ -35,7 +35,7 @@ const Graph1 = () => {
             setSeries([{
                 name: "series1",
                 data: cases,
-            }]);
+            }]);// eslint-disable-line react-hooks/exhaustive-deps
         }
         catch(err){
             console.log(err);
