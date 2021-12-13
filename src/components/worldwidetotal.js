@@ -1,7 +1,9 @@
 import React,{useState,useEffect} from 'react'
 import "../components/worldwidetotal.css"
 import { motion } from "framer-motion"
-import Chart from './chart'
+import Graph1 from '../components/graph1';
+import Graph2 from '../components/graph2';
+import Graph3 from '../components/graph3';
 const Worldwidetotal = () => {
     const [data,setData] = useState([]);
     // const [cases,setCases] = useState(0);
@@ -16,15 +18,10 @@ const Worldwidetotal = () => {
     }
     useEffect(()=>{
         getCovidData();
-        // const interval = setInterval(()=>{
-        //     if(cases<parseInt(data.cases))
-        //     setCases(cases=>cases+10);
-        // },1);
-        // return () => clearInterval(interval);
     },[]);
     return (
        <>
-            <motion.div className="container-wrap flex flex-col shadow-md items-center justify-center mx-auto w-5/6 container border-0 relative top-3 rounded-lg"
+            <motion.div className="container-wrap flex flex-col shadow-md items-center justify-center mx-auto w-11/12 border-0 relative top-3 rounded-lg"
                 animate={{
                     y:10,
                     opacity:1
@@ -36,27 +33,33 @@ const Worldwidetotal = () => {
                 transition={{
                     duration:0.7
                 }}>  
-                <div className="heading right flex justify-center">
-                    <h1>COVID-19 Tracker</h1>
-                </div>
-                <div className="comp right uppercase">
-                    <h3>World Wide Stats</h3>
-                </div>
-                <div className="flex flex-col sm:flex-row mt-6 mont py-4 px-8 justify-between object-contain">
-                    <div className="data-cont bg-yellow-200 border-yellow-400">
-                        Total Cases<div className="world">World</div>
-                        <div className="data text-yellow-500 shadow-sm">{data.cases}</div>
+                
+                <div className="flex flex-col mb-3 mont py-4 px-8 justify-evenly w-full">
+                    <div className="dg-cont">
+                        <div className="data-cont bg-gradient-to-r from-yellow-600 to-yellow-300 ">
+                            Total Cases<div className="world">World</div>
+                            <div className="data text-yellow-800 ">{data.cases}</div>
+                            
+                        </div>
+                        <Graph1/>
                     </div>
-                    <div className="data-cont bg-red-200">
-                        Total Deceased<div className="world">World</div>
-                        <div className="data text-red-500 shadow-sm">{data.deaths}</div>
+                    <div className="dg-cont">
+                        <div className="data-cont bg-gradient-to-r from-red-600 to-red-300 ">
+                            Total Deceased<div className="world">World</div>
+                            <div className="data text-red-900 shadow-sm">{data.deaths}</div>
+
+                        </div>
+                    <Graph2/>
                     </div>
-                    <div className="data-cont bg-green-100">
-                        Total Recovered<div className="world">World</div>
-                        <div className="data text-green-500 shadow-sm">{data.recovered}</div>
+                    <div className="dg-cont">
+                        <div className="data-cont bg-gradient-to-r from-green-700 to-green-300 ">
+                            Total Recovered<div className="world">World</div>
+                            <div className="data text-green-900 shadow-sm">{data.recovered}</div>
+
+                        </div>
+                    <Graph3/>
                     </div>
                 </div>
-                <Chart/>
             </motion.div>      
        </>  
     )

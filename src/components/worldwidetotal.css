@@ -1,5 +1,5 @@
 .data-cont{
-    @apply lg:p-6 sm:p-3 mx-10 my-6 px-10 py-2 rounded-lg shadow-xl md:text-xl text-lg uppercase font-semibold flex flex-col items-center;
+    @apply rounded-lg shadow-xl md:text-xl text-lg uppercase font-semibold flex flex-col items-center justify-center h-4/5 w-2/5 py-3 px-6 text-gray-100;
 }
 .data{
     @apply font-black lg:text-4xl md:text-2xl sm:text-xl mt-6 tracking-wide;
@@ -13,7 +13,10 @@
 .comp1{
     @apply lg:text-5xl text-2xl font-bold flex justify-center tracking-wider;
 }
-.container-wrap{
+/* .container-wrap{
     background-color: #f5cc92;
     box-shadow: 2px 4px 15px 3px #6b6762;
+} */
+.dg-cont{
+    @apply w-full flex sm:flex-row flex-col justify-evenly items-center;
 }

@@ -29,7 +29,7 @@ const CountriesList = () => {
     },[]);
     return (
        <>
-            <motion.div className="wrap container container-wrap w-5/6 flex flex-col items-center justify-center mx-auto bg-yellow-100 mb-10 border rounded-lg"
+            <motion.div className="wrap container container-wrap w-5/6 flex flex-col items-center justify-center mx-auto mb-10 rounded-lg"
             animate={{
                     x:5,
                     opacity:1
@@ -41,9 +41,7 @@ const CountriesList = () => {
                 transition={{
                     duration:1
                 }}>
-                <div className="comp right uppercase flex justify-center">
-                    <h3>Country Wise Stats</h3>
-                </div>
+                
                 { <select className="custom mont" onChange={
                     (e)=>{
                         var selectedCountry = e.target.value;
@@ -61,19 +59,19 @@ const CountriesList = () => {
                     }
                 </select> }
             
-                <div className="container-wrap1 mt-2 flex flex-col shadow-md w-full items-center justify-center container mx-auto">  
-                    <div className="flex flex-col sm:flex-row mt-6 mont object-scale-down">
-                        <div className="data-cont bg-yellow-200 ">
+                <div className="mt-2 flex flex-col shadow-md w-full items-center justify-center container mx-auto">  
+                    <div className="flex flex-col w-full items-center justify-center sm:flex-row mt-6 mont object-scale-down">
+                        <div className="data-cont bg-gradient-to-r from-yellow-600 to-yellow-300 ">
                             Total Cases<div className="country">{country}</div>
-                            <div className="data text-yellow-500 shadow-sm">{dataC.cases}</div>
+                            <div className="data text-yellow-800 shadow-sm">{dataC.cases}</div>
                         </div>
-                        <div className="data-cont bg-red-200">
+                        <div className="data-cont bg-gradient-to-r from-red-600 to-red-300 ">
                             Total Deceased<div className="country">{country}</div>
-                            <div className="data text-red-500 shadow-sm">{dataC.deaths}</div>
+                            <div className="data text-red-900 shadow-sm">{dataC.deaths}</div>
                         </div>
-                        <div className="data-cont bg-green-100">
+                        <div className="data-cont bg-gradient-to-r from-green-600 to-green-300 ">
                             Total Recovered<div className="country">{country}</div>
-                            <div className="data text-green-500 shadow-sm">{dataC.recovered}</div>
+                            <div className="data text-green-900 shadow-sm">{dataC.recovered}</div>
                         </div>
                     </div>
                 </div>   

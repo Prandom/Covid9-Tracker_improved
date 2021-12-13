@@ -36,7 +36,7 @@ const StateData = () => {
     }
     return (
         <>
-            <motion.div className="container container-wrap mx-auto flex flex-col items-center justify-center mont mt-16 shadow-xl mb-10  bg-yellow-100 rounded-xl pb-6 w-5/6 px-6"
+            <motion.div className="container container_wrap mx-auto flex flex-col items-center justify-center mont mt-16 shadow-md mb-10 rounded-xl pb-6 w-5/6 px-6 pt-10"
             animate={{
                     x:5,
                     opacity:1
@@ -48,9 +48,6 @@ const StateData = () => {
                 transition={{
                     duration:0.9
                 }}>
-                <div className="comp right uppercase mb-10">
-                    <h3>Indian States Data</h3>
-                </div>
                 <table className="table-auto bg-red-100 table1">
                     <thead className="head1">
                         <tr className="row row1">
